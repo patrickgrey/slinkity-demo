@@ -1,0 +1,49 @@
+.oj-lowlight {
+  background-color: var(--oj-light-blue);
+}
+
+.oj-list-blocks {
+  counter-reset: list-blocks;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.oj-list-blocks li {
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.oj-list-blocks li:nth-child(even) {
+  background-color: var(--oj-light-blue);
+}
+
+@screen md {
+  .oj-list-blocks li {
+    margin-bottom: 0;
+  }
+
+  .oj-list-blocks li:nth-child(3) {
+    background-color: var(--oj-light-blue);
+  }
+
+  .oj-list-blocks li:nth-child(4) {
+    background-color: #eee;
+  }
+}
+
+.oj-list-blocks li::before {
+  counter-increment: list-blocks;
+  content: counter(list-blocks);
+  line-height: 1.5rem;
+  background-color: white;
+  /* width: 1.5rem; */
+  /* text-align: center; */
+  font-weight: bold;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--ians-colour-blue-mid);
+}
